@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body {
+			background-color: black
+		}
+
+		div.dice1 {
+			float: top;
+			widows: 32px;
+			background: #F5F5F5;
+			border: #999 1px solid;
+			padding: 60px;
+			font-size: 80px;
+			text-align: center;
+			margin: 100px;
+			clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		}
+
+		div.dice2 {
+			float: top;
+			width: 32px;
+			background: #F5F5F5;
+			border: #999 1px solid;
+			padding: 20px;
+			font-size: 24px;
+			text-align: center;
+			margin: 5px;
+			clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+		}
+
+		div.dice3 {
+			float: top;
+			width: 32px;
+			background: #F5F5F5;
+			border: #999 1px solid;
+			padding: 20px;
+			font-size: 24px;
+			text-align: center;
+			margin: 5px;
+			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+		}
+
+		div.dice4 {
+			float: top;
+			width: 32px;
+			background: #F5F5F5;
+			border: #999 1px solid;
+			padding: 20px;
+			font-size: 24px;
+			text-align: center;
+			margin: 5px;
+			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+		}
+
+		div.dice5 {
+			float: top;
+			width: 32px;
+			background: #F5F5F5;
+			border: #999 1px solid;
+			padding: 20px;
+			font-size: 24px;
+			text-align: center;
+			margin: 5px;
+
+		}
+
+		div.dice6 {
+			float: top;
+			width: 32px;
+			background: #F5F5F5;
+			border: #999 1px solid;
+			padding: 20px;
+			font-size: 24px;
+			text-align: center;
+			margin: 5px;
+			clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+		}
+	</style>
+	<script>
+		function rollDice(die1) {
+			var die1 = document.getElementById("die1");
+			var status = document.getElementById("status");
+			var d1 = Math.floor(Math.random() * 20) + 1;
+			die1.innerHTML = d1;
+		}
+		function rollDice2(die2) {
+			var die2 = document.getElementById("die2");
+			var status = document.getElementById("status2");
+			var d2 = Math.floor(Math.random() * 12) + 1;
+			die2.innerHTML = d2;
+
+		}
+		function rollDice3(die3) {
+			var die3 = document.getElementById("die3");
+			var status = document.getElementById("status3");
+			var d3 = Math.floor(Math.random() * 10) + 1;
+			die3.innerHTML = d3;
+
+		}
+
+		function rollDice4(die4) {
+			var die4 = document.getElementById("die4");
+			var status = document.getElementById("status4");
+			var d4 = Math.floor(Math.random() * 8) + 1;
+			die4.innerHTML = d4;
+
+		}
+
+
+		function rollDice5(die5) {
+			var die5 = document.getElementById("die5");
+			var status = document.getElementById("status5");
+			var d5 = Math.floor(Math.random() * 6) + 1;
+			die5.innerHTML = d5;
+
+		}
+
+		function rollDice6(die6) {
+			var die6 = document.getElementById("die6");
+			var status = document.getElementById("status6");
+			var d6 = Math.floor(Math.random() * 4) + 1;
+			die6.innerHTML = d6;
+
+		}
+
+
+	</script>
+</head>
+
+<body>
+	<div id="die1" class="dice1">0</div>
+	<button onclick="rollDice()">Roll D20</button>
+	<h2 id="status" style="clear:right;"></h2>
+
+	<div id="die2" class="dice2">0</div>
+	<button onclick="rollDice2()">Roll D12</button>
+	<h2 id="status2" style="clear:left;"></h2>
+
+	<div id="die3" class="dice3">0</div>
+	<button onclick="rollDice3()">Roll D10</button>
+	<h2 id="status3" style="clear:left;"></h2>
+
+	<div id="die4" class="dice4">0</div>
+	<button onclick="rollDice4()">Roll D8</button>
+	<h2 id="status4" style="clear:left;"></h2>
+
+	<div id="die5" class="dice5">0</div>
+	<button onclick="rollDice5()">Roll D6</button>
+	<h2 id="status5" style="clear:left;"></h2>
+
+	<div id="die6" class="dice6">0</div>
+	<button onclick="rollDice6()">Roll D4</button>
+	<h2 id="status6" style="clear:left;"></h2>
+
+</body>
+
+</html>
